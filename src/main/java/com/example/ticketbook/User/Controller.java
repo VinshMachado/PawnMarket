@@ -11,4 +11,11 @@ public class Controller {
     public String monkey(){
         return "hello ni";
     }
+
+    @PostMapping("/user")
+    public void user(@RequestBody int name){
+
+    }
+
+
 }
