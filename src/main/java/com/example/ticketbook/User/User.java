@@ -18,5 +18,6 @@ public class User {
     @Email(message = "give a valid Email")
     private String gmail;
 
+    @NotBlank(message = "Password Cannot be blank")
     private  String passWord;
 }

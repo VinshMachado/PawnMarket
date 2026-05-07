@@ -1,4 +1,4 @@
-package Pawned_item;
+package com.example.ticketbook.Pawned_item;
 
 
 import jakarta.validation.constraints.NotBlank;
@@ -8,12 +8,7 @@ import jakarta.validation.constraints.Positive;
 import java.util.Date;
 
 
-
-
-import jakarta.validation.constraints.*;
 import org.springframework.data.mongodb.core.mapping.Document;
-
-import java.util.Date;
 
 enum Rarity {
     COMMON,
