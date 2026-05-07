@@ -17,4 +17,6 @@ public class User {
     @NotBlank(message = "Gmail Required")
     @Email(message = "give a valid Email")
     private String gmail;
+
+    private  String passWord;
 }
