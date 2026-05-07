@@ -11,7 +11,9 @@ import java.util.Date;
 
 
 import jakarta.validation.constraints.*;
-        import java.util.Date;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+import java.util.Date;
 
 enum Rarity {
     COMMON,
@@ -22,8 +24,8 @@ enum Rarity {
     PRICELESS,
 }
 
-
-public class schema {
+@Document(collection = "PawnItems")
+public class PawnItem {
 
     @NotBlank(message = "Name is required")
     private String name;
