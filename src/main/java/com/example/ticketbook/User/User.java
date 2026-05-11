@@ -11,8 +11,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class User {
     @NotBlank
     String name;
-    @Min(value=1,message = "Ivalid age")@Max(value=100 ,message = "Age cannot be greater than 100")
-    private int age;
+
 
     @NotBlank(message = "Gmail Required")
     @Email(message = "give a valid Email")
