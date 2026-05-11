@@ -5,7 +5,11 @@ import org.springframework.web.bind.annotation.*;
 
 @RequestMapping("/user")
 public class UserController {
+    private final  UserRepo user;
 
+    UserController(UserRepo user){
+        this.user=  user;
+    }
 
     @GetMapping("/test")
     public String monkey(){
