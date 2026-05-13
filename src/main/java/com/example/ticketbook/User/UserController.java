@@ -1,6 +1,8 @@
 package com.example.ticketbook.User;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Map;
+
 @RestController
 
 @RequestMapping("/user")
@@ -17,8 +19,10 @@ public class UserController {
     }
 
     @PostMapping("/user")
-    public void user(@RequestBody int name){
+    public Map<String,String> user(@RequestBody User usr){
 
+        this.user.save(usr);
+        return Map.of("Message","added User Successfully ");
     }
 
 
