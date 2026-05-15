@@ -9,21 +9,29 @@ import java.util.Map;
 public class UserController {
     private final  UserRepo user;
 
+
     UserController(UserRepo user){
         this.user=  user;
     }
+
 
     @GetMapping("/test")
     public String monkey(){
         return "hello ni";
     }
 
-    @PostMapping("/user")
+    @PostMapping("/addUser")
     public Map<String,String> user(@RequestBody User usr){
-
+        try{
         this.user.save(usr);
         return Map.of("Message","added User Successfully ");
+    }catch (Exception e){
+            System.out.println(e);
+            return Map.of("error",e.getMessage());
+        }
+
     }
+
 
 
 }
